@@ -1,0 +1,15 @@
+{
+    "name": "vista-jsx",
+    "version": "0.0.1",
+    "description": "Yet Another Snabbdom JSX Pragma",
+    "main": "index.js",
+    "repository": "git@gitlab.x.vista.it:vista/jsx.git",
+    "author": "Fabiano Taioli <ftaioli@vista.it>",
+    "license": "UNLICENSED",
+    "private": true,
+    "peerDependencies": {
+        "snabbdom": "^3.0.3"
+    },
+    "type": "module",
+    "main": "index.js"
+}
