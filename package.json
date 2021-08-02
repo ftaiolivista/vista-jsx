@@ -6,7 +6,7 @@
     "repository": "git@gitlab.x.vista.it:vista/jsx.git",
     "author": "Fabiano Taioli <ftaioli@vista.it>",
     "license": "UNLICENSED",
-    "private": true,
+    "private": false,
     "peerDependencies": {
         "snabbdom": "^3.0.3"
     },

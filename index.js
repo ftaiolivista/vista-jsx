@@ -1,4 +1,4 @@
-import { jsx as _jsx } from 'snabbdom'
+import { jsx as _jsx, vnode } from 'snabbdom'
 
 const ns = ['dataset', 'style', 'on', 'hook', 'props', 'attrs', 'data']
 
@@ -116,4 +116,8 @@ const jsx = (sel, data, ...children) =>
             .filter(v => v !== undefined && !(Array.isArray(v) && v.length < 1))
     )
 
-export default jsx
+function Fragment (_props, children) {
+    return vnode(undefined, undefined, children, undefined, undefined)
+}
+
+export { jsx, Fragment }
