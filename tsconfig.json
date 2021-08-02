@@ -17,5 +17,5 @@
             "@vista/iter-theme": ["../iter-theme"]
         }
     },
-    "files": ["app/js/main.js"]
+    "files": ["./index.js"]
 }

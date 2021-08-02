@@ -116,8 +116,7 @@ const jsx = (sel, data, ...children) =>
             .filter(v => v !== undefined && !(Array.isArray(v) && v.length < 1))
     )
 
-function Fragment (_props, children) {
-    return vnode(undefined, undefined, children, undefined, undefined)
-}
+const fragment = (_, children) =>
+    vnode(undefined, undefined, children, undefined, undefined)
 
-export { jsx, Fragment }
+export { jsx, fragment }
