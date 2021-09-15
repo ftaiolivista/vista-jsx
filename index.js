@@ -104,7 +104,7 @@ const isText = v => typeof v === 'string' || typeof v === 'number'
 const jsx = (sel, data, ...children) =>
     _jsx(
         sel,
-        needParse(sel, data) ? parseModules(data) : data,
+        (needParse(sel, data) ? parseModules(data) : data) || {},
         children
             .map(child =>
                 isVnode(child)
