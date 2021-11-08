@@ -5,7 +5,7 @@ const ns = ['dataset', 'style', 'on', 'hook', 'props', 'attrs', 'data']
 function clean (obj) {
     const t = obj
     for (const v in t) {
-        if (typeof t[v] === 'object') {
+        if (v !== 'props' && typeof t[v] === 'object') {
             clean(t[v])
             if (t[v] && Object.getOwnPropertyNames(t[v]).length < 1) {
                 delete t[v]
@@ -41,20 +41,18 @@ const parseModules = data => {
     const saneData = {
         key,
         class: classObj || undefined,
-        props: {
-            ...props
-        },
         attrs: {
             ...attrs,
             id,
             class: classTxt || undefined
         },
+        props,
         dataset,
         style,
         hook
     }
 
-    const cleaned = clean(
+    return clean(
         Object.entries(others).reduce((data, e) => {
             const isModule = ns.find(ns => e[0].startsWith(ns + '-'))
             const [_modNS, key] = ((isModule && e[0]) || '').split(/-(.+)/)
@@ -87,7 +85,6 @@ const parseModules = data => {
                     }
         }, saneData)
     )
-    return cleaned
 }
 
 const needParse = (sel, data) =>

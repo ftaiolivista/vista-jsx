@@ -1,6 +1,6 @@
 {
     "name": "vista-jsx",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Yet Another Snabbdom JSX Pragma",
     "main": "index.js",
     "repository": "git@gitlab.x.vista.it:vista/jsx.git",
@@ -10,6 +10,5 @@
     "peerDependencies": {
         "snabbdom": "^3.0.3"
     },
-    "type": "module",
-    "main": "index.js"
+    "type": "module"
 }
