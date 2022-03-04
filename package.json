@@ -3,9 +3,9 @@
     "version": "0.0.4",
     "description": "Yet Another Snabbdom JSX Pragma",
     "main": "index.js",
-    "repository": "git@gitlab.x.vista.it:vista/jsx.git",
+    "repository": "https://github.com/ftaiolivista/vista-jsx.git",
     "author": "Fabiano Taioli <ftaioli@vista.it>",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "private": false,
     "peerDependencies": {
         "snabbdom": "^3.0.3"
